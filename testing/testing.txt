@@ -1,3 +1,4 @@
+https://www.avis.com/en/home
 1.Проверьте, что аренда авто на большую дистанцию и малый промежуток времени не производится.
 а)В поле «pick-up location» введите «Dresden Airport»
 б)В поле «drop location» введите «Moscow, Sheremetjevo Airport»
