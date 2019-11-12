@@ -1,4 +1,9 @@
+  
 *.db
 *.log
 bin/
 target/
+
+*.iml
+.idea/
+*.DS_Store
