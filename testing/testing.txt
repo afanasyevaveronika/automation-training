@@ -1,77 +1,87 @@
-https://www.avis.com/en/home
-1.Проверьте, что аренда авто на большую дистанцию и малый промежуток времени не производится.
-а)В поле «pick-up location» введите «Dresden Airport»
-б)В поле «drop location» введите «Moscow, Sheremetjevo Airport»
-в)В поле «pick-up date» выберите «11/20/2020»
-г)В поле «retutn date» выберите «11/20/2020»
-д)В поле «pick-up time» выберите «10:30 AM»
-е)В поле «retutn time» выберите «11:30 AM».
-ж)Кликните «Select My Car»
+https://www.avis.com/
+
+1.Проверьте, что аренда авто на большую дистанцию и малый промежуток времени не производится:
+а)В поле «pick-up location» введите «Dresden Airport»,
+б)В поле «drop location» введите «Moscow, Sheremetjevo Airport»,
+в)В поле «pick-up date» выберите «date.now+2»,
+г)В поле «retutn date» выберите «date.now+2»,
+д)В поле «pick-up time» выберите «time.now»,
+е)В поле «retutn time» выберите «time.now+1»,
+ж)Кликните «Select My Car»,
 Результат: появляется сообщение :«The Rental Location you have selected is Sold Out during the dates» requested. Please try another Avis location for renting.
 
-2.Проверьте, что выбор автомобиля без указания «pick-up location» не выполняется.
-а)Заполняем поле «pick-up date»
-б)Заполняем поле «pick-up time»
-в)Заполняем поле «retutn date»
-г)Заполняем поле «retutn time»
-д)Кликните «Select My Car»
+2.Проверьте, что выбор автомобиля без указания «pick-up location» не выполняется:
+а)Заполняем поле «pick-up date»,
+б)Заполняем поле «pick-up time»,
+в)Заполняем поле «retutn date»,
+г)Заполняем поле «retutn time»,
+д)Кликните «Select My Car»,
 Результат: появляется сообщение:«Please enter a Pick-up Location».
 
-3.При выборе места аренды «Minsk International Airport» на время «10:30 PM» до «11:30 PM» появляется сообщение о том, что локация в выбранное время закрыта.
-а)В «pick-up location» введите «Minsk International Airport»
-б)В «pick-up time» выберите «10:30 AM»
-в)В «return time» выберите «11:30 AM»
-г)Кликните «Select My Car»
+3.При выборе места аренды «Minsk International Airport» на время «10:30 PM» до «11:30 PM» появляется сообщение о том, что локация в выбранное время закрыта:
+а)В поле «pick-up location» введите «Minsk International Airport»,
+б)В поле «pick-up time» выберите «10:30 AM»,
+в)В поле «return time» выберите «11:30 AM»,
+г)Кликните «Select My Car»,
 Результат: появляется сообщение: «The Rental Location you have selected is closed during the hours requested. Hours for this location are: Sun-Sat 10:00 AM - 7:00PM Rental service may be available after hours.Call: (375) 173-347990 for further details».
 
-4.Проверьте, что аренда авто на промежуток более, чем 30 дней онлайн не выполняется.
-а)В поле «pick-up date» выберите «10/29/2019», 
-б)В поле «return date» выберите «06/16/2020»
-в)Кликните «Select My Car»
+4.Проверьте, что аренда авто на промежуток более, чем 30 дней онлайн не выполняется:
+а)В поле «pick-up date» выберите «date.now», 
+б)В поле «return date» выберите «date.now+35»,
+в)Кликните «Select My Car»,
 Результат: появляется сообщение:  «Sorry, Avis doesn´t allow a reservation that is over 30 days to be made online. Please call us to complete your booking». 
 
-5.Проверьте, что аренда и возврат авто в один и тот же момент времени не выполняются.
-а)В поле «pick-up date» выберите «11/03/2019»
-б)В поле «return date» выберите «11/03/2019»
-в)В поле «pick-up time» выберите «12:00 AM»
-г)В поле «return time» выберите «12:00 AM»
-д)Кликните «Select My Car»
+5.Проверьте, что аренда и возврат авто в один и тот же момент времени не выполняются:
+а)В поле «pick-up date» выберите «date.now+2»,
+б)В поле «return date» выберите «date.now+2»,
+в)В поле «pick-up time» выберите «time.now+1»,
+г)В поле «return time» выберите «time.now+1»,
+д)Кликните «Select My Car»,
 Результат: появляется сообщение: «Pick-up Date cannot be after Return Date».
 
-6.При не согласии с условиями аренды в форме «Your Information» появляется сообщение об ошибке.
-а)Верно заполните все поля в форме «Your Information»
-б)Не выставляйте галочку напротив пункта «I have read and accept the Location Policies and Rental Terms and Conditions»
-Результат: появляется сообщение: «Before confirming your booking, please indicate that you agree to the terms and conditions of your rental by clicking on the checkbox».
+6.Проверьте, что аренда и возврат авто в двух далёких друг от друга локациях не выволняются:
+а)В «pick-up location» выберите «Moscow, Sheremetjevo Airport, Moscow, Russian Federation-(SVO)»,
+б)В поле «drop location» выберите «New Bedford Municipal Airport, New Bedford, Massachusetts, United States-(EWB)»,
+в)В поле «pick-up date» выберите «date.now+5»,
+г)В поле «return date» выберите «date.now+15»,
+е)В поле «pick-up time» выберите «time.now+1»,
+ё)В поле «return time» выберите «time.now+1»,
+ж)Кликните «Select My Car»,
+Результат: появляется сообщение: «A One-Way Rental between these 2 locations cannot be booked online».
 
-7.Проверьте, что при выборе времени, которое уже прошло, аренда авто не выполняется.
-а)В поле «pick-up location» выберите «Dresden Airport»
-б)В поле «pick-up time» - «7:00 AM» (на момент времени «11:00 AM»)
-в)В поле «return time» - «7:00 PM»
-г)В «pick-up date» выберите «10/28/2019» (в день «10/28/2019»)
-д)В «return date» выберите «10/31/2019»
-е)Кликните «Select My Car»
+7.Проверьте, что при выборе времени, которое уже прошло, аренда авто не выполняется:
+а)В поле «pick-up location» выберите «Dresden Airport»,
+б)В поле «pick-up time» - «time.now-4»,
+в)В поле «return time» - «time.now+10»,
+г)В поле «pick-up date» выберите «date.now»,
+д)В поле «return date» выберите «date.now+4»,
+е)Кликните «Select My Car»,
 Результат: появляется сообщение: «You selected a date/time prior to the current time».
 
-8.Проверьте, что при попытке ввести в поле «pick-up location» место, где аренда авто невозможна, появляется сообщение об ошибке.
-а)В поле «pick-up location» введите «Kalinkovichi»
-б)В «pick-up time» выберите «7:00 AM»
-в)В «return time» выберите «11:00 AM»
-г)В «pick-up date» выберите «10/30/2019»
-д)В «return date» выберите «11/01/2019»
-г)Кликните «Select My Car»
+8.Проверьте, что при попытке ввести в поле «pick-up location» место, где аренда авто невозможна, появляется сообщение об ошибке:
+а)В поле «pick-up location» введите «Kalinkovichi»,
+б)В поле «pick-up time» выберите «time.now»,
+в)В поле «return time» выберите «time.now+1»,
+г)В поле «pick-up date» выберите «date.now»,
+д)В поле «return date» выберите «date.now+3»,
+г)Кликните «Select My Car»,
 Результат: появляется сообщение: «We are unable to process your request at this time. Please return to the Homepage and start your process again or use the Worldwide Phone Number List to find your Avis Customer Service telephone number».
 
-9.Проверьте, что при выборе более позднего времени в «pick-up time», чем в «return time» в один и тот же день аренда авто не выполняется.
-а)В поле «pick-up location» введите «Moscow, Sheremetjevo Airport»
-б)В поле «pick-up date» выберите «11/01/2019»
-в)В поле «return date» выберите «11/01/2019»
-г)В «pick-up time» выберите «9:00 AM» 
-д)В «return time» выберите «8:00 AM»
-е)Кликните «Select My Car»
+9.Проверьте, что при выборе более позднего времени в «pick-up time», чем в «return time» в один и тот же день аренда авто не выполняется:
+а)В поле «pick-up location» введите «Moscow, Sheremetjevo Airport»,
+б)В поле «pick-up date» выберите «date.now»,
+в)В поле «return date» выберите «date.now»,
+г)В поле «pick-up time» выберите «time.now+4»,
+д)В поле «return time» выберите «time.now+2»,
+е)Кликните «Select My Car»,
 Результат: появляется сообщение: «Whoops! Your return time has already passed. Please select a new time».
 
-10.Проверьте, что при вводе в форму «Your Information» невалидного номера телефона аренда авто не выполняется.
-а)Заполните всю форму «Your Information» правильно
-б)В поле «Phone» введите «89799aaa»
-в)Кликните «Reserve»
-Результат: появляется сообщение: «Please provide a valid Mobile Number».
+10.Проверьте, что возможно арендовать авто в «Moscow, Sheremetjevo Airport, Moscow, QC-(SVO)» и вернуть в «Moscow, Vnukovo Intl Airport, Moscow, QC-(VKO)» возможно:
+а)В поле «pick-up location» выберите «Moscow, Sheremetjevo Airport, Moscow, QC-(SVO)»,
+б)В поле «drop location» выберите «Moscow, Vnukovo Intl Airport, Moscow, QC-(VKO)»,
+в)В поле «pick-up date» выберите «date.now+1»,
+г)В поле «return date» выберите «date.now+3»,
+д)В поле «pick-up time» выберите «time.now»,
+е)В поле «return time» выберите «time.now+1»,
+ё)Кликните «Select My Car»,
+Результат: Перенаправление на другую страницу и показ доступных для бронирования автомобилей.
