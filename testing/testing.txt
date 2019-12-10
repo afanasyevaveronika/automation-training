@@ -38,13 +38,7 @@ https://www.avis.com/
 г)Кликните «Select My Car»,
 Результат: появляется сообщение: «The Rental Location you have selected is closed during the hours requested. Hours for this location are: Sun-Sat 10:00 AM - 7:00PM Rental service may be available after hours.Call: (375) 173-347990 for further details».
 
-6.Проверьте, что аренда авто на промежуток более, чем 30 дней онлайн не выполняется:
-а)В поле «pick-up date» выберите «date.now», 
-б)В поле «return date» выберите «date.now+35»,
-в)Кликните «Select My Car»,
-Результат: появляется сообщение:  «Sorry, Avis doesn´t allow a reservation that is over 30 days to be made online. Please call us to complete your booking». 
-
-7.Проверьте, что аренда авто на большую дистанцию и малый промежуток времени не производится:
+6.Проверьте, что аренда авто на большую дистанцию и малый промежуток времени не производится:
 а)В поле «pick-up location» введите «Dresden Airport»,
 б)В поле «drop location» введите «Moscow, Sheremetjevo Airport»,
 в)В поле «pick-up date» выберите «date.now+2»,
@@ -54,7 +48,7 @@ https://www.avis.com/
 ж)Кликните «Select My Car»,
 Результат: появляется сообщение :«The Rental Location you have selected is Sold Out during the dates» requested. Please try another Avis location for renting.
 
-6.Проверьте, что аренда и возврат авто в двух далёких друг от друга локациях не выволняются:
+7.Проверьте, что аренда и возврат авто в двух далёких друг от друга локациях не выволняются:
 а)В «pick-up location» выберите «Moscow, Sheremetjevo Airport, Moscow, Russian Federation-(SVO)»,
 б)В поле «drop location» выберите «New Bedford Municipal Airport, New Bedford, Massachusetts, United States-(EWB)»,
 в)В поле «pick-up date» выберите «date.now+5»,
