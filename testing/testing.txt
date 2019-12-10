@@ -34,8 +34,8 @@ https://www.avis.com/
 5.Проверьте, что аренда и возврат авто в один и тот же момент времени не выполняются:
 а)В поле «pick-up date» выберите «date.now+2»,
 б)В поле «return date» выберите «date.now+2»,
-в)В поле «pick-up time» выберите «time.now+1»,
-г)В поле «return time» выберите «time.now+1»,
+в)В поле «pick-up time» выберите «time.now»,
+г)В поле «return time» выберите «time.now»,
 д)Кликните «Select My Car»,
 Результат: появляется сообщение: «Pick-up Date cannot be after Return Date».
 
