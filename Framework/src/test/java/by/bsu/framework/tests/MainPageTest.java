@@ -1,15 +1,18 @@
-package test;
+package by.bsu.framework.tests;
 
-import service.CarRentingCreator;
-import test.java.model.CarRenting;
-import test.java.test.CommonConditions;
+import by.bsu.framework.page.MainPage;
+import by.bsu.framework.service.CarRentingCreator;
+import by.bsu.framework.model.CarRenting;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
+import static org.hamcrest.core.IsEqual.equalTo;
+
 public class MainPageTest extends CommonConditions {
     private MainPage MainPage = new MainPage(driver);
-
 
     @Test
     public void pickupAndReturnAtTheSameMomentImpossible() {
@@ -36,7 +39,7 @@ public class MainPageTest extends CommonConditions {
                 .selectReturnTime(carRenting.getReturnTime())
                 .selectCar();
         Assert.assertEquals("We are unable to process your request at this time." +
-                            "Please return to the Homepage and start your process again or use" +
+                        "Please return to the Homepage and start your process again or use" +
                         "the Worldwide Phone Number List to find your Avis Customer Service telephone number",
                 MainPage.getErrorMessage());
     }
@@ -76,8 +79,8 @@ public class MainPageTest extends CommonConditions {
                 .selectReturnTime(carRenting.getReturnTime())
                 .selectCar();
         Assert.assertEquals("The Rental Location you have selected is closed during the hours requested." +
-                "Hours for this location are: Sun-Sat 10:00 AM - 7:00PM Rental service may be available after hours." +
-                "Call: (375) 173-347990 for further details",
+                        "Hours for this location are: Sun-Sat 10:00 AM - 7:00PM Rental by.bsu.framework.service may be available after hours." +
+                        "Call: (375) 173-347990 for further details",
                 MainPage.getErrorMessage());
     }
 
@@ -108,20 +111,6 @@ public class MainPageTest extends CommonConditions {
                 .selectReturnTime(carRenting.getReturnTime().plusHours(1))
                 .selectCar();
         Assert.assertEquals("A One-Way Rental between these 2 locations cannot be booked online",
-                MainPage.getErrorMessage());
-    }
-
-    @Test
-    public void pastPickUpTimeCarRenting() {
-        CarRenting carRenting = CarRentingCreator.withPickUpLocation();
-        MainPage.openPage()
-                .inputPickUpLocation(carRenting.getPickUpLocation())
-                .inputPickUpDate(carRenting.getDateNow())
-                .inputReturnDate(carRenting.getDateNow().plusDays(4))
-                .selectPickUpTime(carRenting.getPickUpTime().minusHours(4))
-                .selectReturnTime(carRenting.getReturnTime().plusHours(10))
-                .selectCar();
-        Assert.assertEquals("You selected a date/time prior to the current time",
                 MainPage.getErrorMessage());
     }
 

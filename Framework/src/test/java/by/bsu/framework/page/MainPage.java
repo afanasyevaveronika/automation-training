@@ -1,7 +1,6 @@
-package test.java.page;
+package by.bsu.framework.page;
 
-import page.VehiclePage;
-import test.java.page.AbstractPage;
+import by.bsu.framework.model.CarRenting;
 import org.apache.log4j.Level;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -14,8 +13,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-import static service.CarRentingCreator.DATA_FORMATTER;
-import static service.CarRentingCreator.TIME_FORMATTER;
+import static by.bsu.framework.service.CarRentingCreator.DATA_FORMATTER;
+import static by.bsu.framework.service.CarRentingCreator.TIME_FORMATTER;
 
 
 public class MainPage extends AbstractPage {
@@ -52,7 +51,7 @@ public class MainPage extends AbstractPage {
     public MainPage openPage() {
         driver.navigate().to(MainPage_URL);
         new WebDriverWait(driver, WAIT_TIMEOUT_SECONDS);
-        logger.log(Level.INFO, "Home page opened");
+        logger.log(Level.INFO, "Home by.bsu.framework.page opened");
         return this;
     }
 
@@ -101,12 +100,12 @@ public class MainPage extends AbstractPage {
                 .getText();
     }
 
-    public VehiclePage carRenting(test.java.model.CarRenting carRenting) {
+    public VehiclePage carRenting(CarRenting carRenting) {
         inputPickUpLocation(carRenting.getPickUpLocation())
                 .inputPickUpDate(carRenting.getDateNow().plusDays(1))
                 .inputReturnDate(carRenting.getDateNow().plusDays(2))
                 .selectCar();
-        logger.log(Level.INFO, "Vehicle page performed.");
+        logger.log(Level.INFO, "Vehicle by.bsu.framework.page performed.");
         return new VehiclePage(driver);
     }
 }

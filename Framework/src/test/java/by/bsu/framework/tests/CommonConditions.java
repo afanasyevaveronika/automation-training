@@ -1,7 +1,7 @@
-package test.java.test;
+package by.bsu.framework.tests;
 
-import test.java.driver.DriverSingleton;
-import test.java.util.TestListener;
+import by.bsu.framework.driver.DriverSingleton;
+import by.bsu.framework.util.TestListener;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;

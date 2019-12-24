@@ -1,12 +1,9 @@
-package service;
+package by.bsu.framework.service;
 
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
-import test.java.model.CarRenting;
-import test.java.service.TestDataReader;
-
-
+import by.bsu.framework.model.CarRenting;
 
 public class CarRentingCreator {
 

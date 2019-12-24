@@ -1,4 +1,4 @@
-package test.java.service;
+package by.bsu.framework.service;
 
 import java.util.ResourceBundle;
 

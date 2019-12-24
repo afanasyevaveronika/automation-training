@@ -1,4 +1,4 @@
-package test.java.model;
+package by.bsu.framework.model;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
