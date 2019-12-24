@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="All by.bsu.framework.tests" verbose="1">
+    <test name="All by.bsu.framework.tests">
+        <packages>
+            <package name="by.bsu.framework.tests"/>
+        </packages>
+    </test>
+</suite>
